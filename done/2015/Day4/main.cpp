@@ -43,12 +43,9 @@ std::string generateMD5(const std::string& input) {
 int main()
 {	
 	string hash = "";
-	// 
-	regex pattern("^000000.*");
-
     int i = 0;
 
-    while(!regex_match(hash, pattern))
+    while(hash.substr(0, 6) != "000000")
 	{
 		string in = "ckczppom" + to_string(i++);
 		hash = generateMD5(in);
@@ -59,4 +56,4 @@ int main()
 	return(0);
 }
 
-// g++ -lssl -lcrypto -O3 main.cpp && time ./a.out
+// g++ -lssl -lcrypto -O3 main.cpp && time ./a.out ; rm -f a.out
