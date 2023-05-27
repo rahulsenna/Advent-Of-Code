@@ -1055,3 +1055,73 @@ auto new_end = std::unique_copy(numbers.begin(), numbers.end(), destination.begi
 ```
 
 Copies elements from a range to another range, removing consecutive duplicate elements.
+
+---
+
+## std::regex_match
+
+```cpp
+
+#include <regex>
+bool match = std::regex_match(input, std::regex(pattern));
+```
+Checks if the entire input matches a given regular expression pattern.
+
+---
+
+## std::regex_search
+
+```cpp
+
+#include <regex>
+bool search = std::regex_search(input, std::regex(pattern));
+```
+Checks if the input contains a substring that matches a given regular expression pattern.
+
+---
+
+## std::regex_replace
+
+```cpp
+
+#include <regex>
+std::string replaced = std::regex_replace(input, std::regex(pattern), replacement);
+```
+Replaces matches of a regular expression pattern in the input string with a specified replacement.
+
+
+---
+
+## std::regex_iterator
+
+```cpp
+
+#include <regex>
+std::regex_iterator<std::string::iterator> iter(input.begin(), input.end(), std::regex(pattern));
+std::regex_iterator<std::string::iterator> end;
+while (iter != end) {
+    std::cout << iter->str() << std::endl;
+    ++iter;
+}
+```
+Iterates over all non-overlapping matches of a regular expression pattern in the input string.
+
+
+---
+
+## std::regex_token_iterator
+
+```cpp
+
+#include <regex>
+std::regex_token_iterator<std::string::iterator> iter(input.begin(), input.end(), std::regex(pattern), -1);
+std::regex_token_iterator<std::string::iterator> end;
+while (iter != end) {
+    std::cout << iter->str() << std::endl;
+    ++iter;
+}
+```
+Splits the input string into tokens based on a regular expression pattern.
+
+---
+
