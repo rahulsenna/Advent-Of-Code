@@ -1125,3 +1125,124 @@ Splits the input string into tokens based on a regular expression pattern.
 
 ---
 
+
+### `std::bitset::operator[]`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+bool value = bits[3];
+```
+Accesses the bit at a specific position in a `std::bitset` object.
+
+
+---
+
+### `std::bitset::size`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+std::size_t size = bits.size();
+```
+Returns the number of bits in a `std::bitset` object.
+
+
+---
+
+### `std::bitset::count`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+std::size_t count = bits.count();
+```
+Counts the number of set bits (1s) in a `std::bitset` object.
+
+
+---
+
+### `std::bitset::test`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+bool isSet = bits.test(4);
+```
+Checks if a specific bit in a `std::bitset` object is set (1).
+
+
+---
+
+### `std::bitset::all`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+bool allSet = bits.all();
+```
+Checks if all bits in a `std::bitset` object are set (1).
+
+
+---
+
+### `std::bitset::any`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+bool anySet = bits.any();
+```
+Checks if any bit in a `std::bitset` object is set (1).
+
+
+---
+
+### `std::bitset::none`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+bool noneSet = bits.none();
+```
+Checks if no bits in a `std::bitset` object are set (1).
+
+
+---
+
+### `std::bitset::set`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+bits.set(3);
+```
+Sets a specific bit in a `std::bitset` object to 1.
+
+
+---
+
+### `std::bitset::reset`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+bits.reset(2);
+```
+Resets a specific bit in a `std::bitset` object to 0.
+
+
+---
+
+### `std::bitset::flip`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+bits.flip(1);
+```
+Flips a specific bit in a `std::bitset` object (1 to 0 or 0 to 1).
+
+
+---
+
+### `std::bitset::to_string`
+```cpp
+#include <bitset>
+std::bitset<8> bits;
+std::string bitString = bits.to_string();
+```
+Converts a `std::bitset` object to a string representation.
+
+---
+
