@@ -54,13 +54,15 @@
                 "/Zi",
                 "/EHsc",
                 "/nologo",
+                "/Yubits/stdc++.h",
                 "/std:c++17",
                 "/diagnostics:caret",
                 "/Fe${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
-                "${file}"
+                "${file}",
+                "bits/stdc++.obj"
             ],
             "options": {
-                "cwd": "${workspaceFolder}\\bin"
+                "cwd": "${workspaceFolder}/bin"
             },
             "problemMatcher": [
                 "$msCompile"
@@ -73,7 +75,22 @@
                 "focus": false,
                 "panel": "shared"
               },
-        }
+
+            "dependsOn": ["delete_bin_win"],
+
+        },
+        {
+            "label": "delete_bin_win",
+            "type": "shell",
+            "command": "del ${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared"
+              },
+            "isBackground": true
+        },
     ],
 
     "version": "2.0.0"
