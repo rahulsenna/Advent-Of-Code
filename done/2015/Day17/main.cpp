@@ -3,16 +3,9 @@ using namespace std;
 
 struct COMBINATION
 {
-    COMBINATION(std::vector<int> &arr)
+    COMBINATION(std::vector<int> &arr, int len)
+        : elements(arr), current_combination(len), current_indices(len), current_length(len)
     {
-        elements            = arr;
-        current_combination = std::vector<int>(elements.size());
-        current_indices     = std::vector<int>(elements.size());
-    }
-
-    void of_length(int len)
-    {
-        current_length = len;
         for (int i = 0; i < current_length; ++i)
         {
             current_indices[i]     = i;
@@ -48,7 +41,7 @@ struct COMBINATION
     }
 
 private:
-    std::vector<int> elements;
+    std::vector<int> &elements;
     std::vector<int> current_combination;
     std::vector<int> current_indices;
     int              current_length;
@@ -58,12 +51,11 @@ int main() {
     ifstream inputFile("input.txt");
 
     int containers = 0, min_containers = 0;
-
     vector<int> numbers(istream_iterator<int>(inputFile), {});
-    COMBINATION combinations(numbers);    
+
     for (int i = 1; i <= numbers.size(); ++i)
     {
-        combinations.of_length(i);
+        COMBINATION combinations(numbers, i);
         while (combinations.has_next())
         {
              auto &combination = combinations.next();
