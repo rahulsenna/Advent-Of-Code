@@ -59,7 +59,9 @@
                 "/diagnostics:caret",
                 "/Fe${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
                 "${file}",
-                "bits/stdc++.obj"
+                "bits/stdc++.obj",
+                // "/link",
+                // "/INCREMENTAL:no"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/bin"

@@ -48,7 +48,7 @@
             "console": "internalConsole",
 
             "preLaunchTask": "C/C++: cl.exe build active file",
-            "postDebugTask": "C/C++: cl.exe build active file",
+            // "postDebugTask": "C/C++: cl.exe build active file",
         },
 
     ],
