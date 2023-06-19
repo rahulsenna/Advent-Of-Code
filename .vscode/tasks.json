@@ -69,7 +69,10 @@
             "problemMatcher": [
                 "$msCompile"
             ],
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "detail": "compiler: cl.exe",
             "presentation": {
                 "echo": false,
@@ -84,14 +87,15 @@
         {
             "label": "delete_bin_win",
             "type": "shell",
-            "command": "del ${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+            "command": "if (Test-Path ${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe) { Remove-Item ${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe }",
+            // "command": "del ${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
             "presentation": {
                 "echo": false,
                 "reveal": "never",
                 "focus": false,
                 "panel": "shared"
               },
-            "isBackground": true
+            // "isBackground": true
         },
     ],
 
