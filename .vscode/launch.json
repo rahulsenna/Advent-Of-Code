@@ -47,8 +47,16 @@
             "environment": [],
             "console": "internalConsole",
 
-            "preLaunchTask": "C/C++: cl.exe build active file",
-            // "postDebugTask": "C/C++: cl.exe build active file",
+                        
+            "presentation": {
+                "hidden": false,
+                "group": "",
+                "order": 1,
+            },
+            "requireExactSource": true,
+
+            "preLaunchTask": "C/C++: MSVC build active file",
+            "postDebugTask": "delete_bin_win",
         },
 
     ],
