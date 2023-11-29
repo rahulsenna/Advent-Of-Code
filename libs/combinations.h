@@ -56,3 +56,14 @@ private:
 };
 
 #endif//ADVENT_OF_CODE_COMBINATIONS_H
+/*          Uses code 
+
+vector<int> numbers = {1,2,3,4,5};
+COMBINATION combinations(numbers, 3);    
+while (combinations.has_next())
+{
+     auto &combination = combinations.next();
+		// DO SOMETHING WITH `combination `
+}  
+
+*/

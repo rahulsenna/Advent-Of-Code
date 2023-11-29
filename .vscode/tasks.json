@@ -51,7 +51,7 @@
             "label": "C/C++: MSVC build active file",
             "command": "cl.exe",
             "args": [
-                "/Zi",
+                "/Z7",
                 "/EHsc",
                 "/nologo",
                 "/Yubits/stdc++.h",

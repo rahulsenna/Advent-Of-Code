@@ -40,12 +40,12 @@
             "name": "Debug Current File Windows(MSVC)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
-            "args": ["<", "input.txt"],
+            "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+            // "args": ["<", "input.txt"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
-            "console": "internalConsole",
+            "console": "externalTerminal",
 
                         
             "presentation": {
