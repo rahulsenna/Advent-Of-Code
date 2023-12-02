@@ -4,8 +4,12 @@ using namespace std;
 
 int main()
 {
-	char a = 'x';char b = 'y'; char c = 'z';
-	string s = {a,b,c}; // res; s = "xyz"	
-	return(0);
+	ifstream file("sample.txt");
+    // ifstream file("input.txt");
+    for(string line; file >> line;)
+    {
+        
+    }
 
+	return(0);
 }
