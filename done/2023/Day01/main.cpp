@@ -22,25 +22,15 @@ int main()
 
     for (string line; file >> line;)
     {
-        unordered_map<size_t, pair<string, string>> finds;
         for (const auto &num : num_map)
         {
             size_t found = line.find(num.second);
             while (found != string::npos)
             {
-                finds[found] = num;
-                found        = line.find(num.second, found + 1);
+                line.replace(found+1, 1, num.first);
+                found = line.find(num.second, found+1);
             }
         }
-        vector<int> find_idxs;
-        transform(finds.begin(), finds.end(), back_inserter(find_idxs), [](const auto &pair) { return pair.first; });
-        sort(find_idxs.begin(), find_idxs.end());
-        if (!find_idxs.empty())
-        {
-            line.replace(find_idxs.front(), 1, finds[find_idxs.front()].first);
-            line.replace(find_idxs.back(), 1, finds[find_idxs.back()].first);
-        }
-
         line.erase(remove_if(line.begin(), line.end(), ::isalpha), line.end());
         res2 += stoi(string{line.front(), line.back()});
     }
