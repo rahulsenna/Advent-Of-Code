@@ -33,7 +33,6 @@
             
             
             "preLaunchTask": "C/C++: g++ build active file (Linux)",
-            "postDebugTask": "C/C++: g++ build active file (Linux)",
         },
 
         {
@@ -56,7 +55,6 @@
             "requireExactSource": true,
 
             "preLaunchTask": "C/C++: MSVC build active file",
-            "postDebugTask": "delete_bin_win",
         },
 
     ],
