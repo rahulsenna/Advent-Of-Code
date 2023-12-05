@@ -18,24 +18,16 @@ int main()
         vector<int> nums = {istream_iterator<int>(ss), {}};
         sort(win_n.begin(), win_n.end());
 
-        int points = 0,won=0;
+        int won=0;
         for (const auto n : nums)
-        {
             if (binary_search(win_n.begin(), win_n.end(), n))
-            {
-                points = points ? points * 2 : 1;
                 won++;
-            }
-        }
-
-        for (size_t i = 0; i < cards[idx]; ++i)
-        {
-            int t_idx = idx;
-            for (size_t i = 0; i < won; ++i)
-                cards[++t_idx]++;	        
-        }
         
-        sum += points;
+        for (int i = idx + 1; i < (won+idx+1); ++i)
+            cards[i] += cards[idx];
+        
+
+        sum += (int)pow(2,won-1);
     }
     auto sum2 = accumulate(cards.begin(), cards.end(), 0);
 
