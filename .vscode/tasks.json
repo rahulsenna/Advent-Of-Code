@@ -40,17 +40,18 @@
             "label": "C/C++: MSVC build active file",
             "command": "cl.exe",
             "args": [
+                // "/Ox",
                 "/Z7",
                 "/EHsc",
                 "/nologo",
-                "/Yubits/stdc++.h",
+                // "/Yubits/stdc++.h",
                 "/std:c++17",
                 "/diagnostics:caret",
                 "/Fe${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
                 "${file}",
-                "bits/stdc++.obj",
+                // "bits/stdc++.obj",
                 // "/link",
-                // "/INCREMENTAL:no"
+                "/INCREMENTAL:no"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/bin"

@@ -4,6 +4,7 @@ CompileFlags:                     # Tweak the parse settings
 
 Diagnostics:
   UnusedIncludes: Strict
+  Suppress: [-Wc++17-extensions, template_missing_args]
   ClangTidy:
     Add: []
     Remove: [bugprone-easily-swappable-parameters]
